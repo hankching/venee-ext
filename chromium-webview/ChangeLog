@@ -1,0 +1,370 @@
+02/16/16 16:05:34: Version 44.0.2403.119 (alps-mp-m0.mp9-0)
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium.git]
+    47eb4b1 2016-01-14 [ALPS02524980] Everest browser low power improvement item
+
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium/third_party/WebKit.git]
+    e5e2f82 2016-01-14 [ALPS02524980] Everest browser low power improvement item
+
+
+12/10/15 00:11:51: Version 44.0.2403.119 (alps-trunk-m0.tk-44)
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium.git]
+    6d931b1bf 2015-12-09 [ALPS02440051] Enhance logs for page loading
+
+
+12/09/15 00:02:37: Version 44.0.2403.119 (alps-trunk-m0.tk-43)
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium.git]
+    e4e7f81 2015-12-08 [ALPS02440051] Enhance logs for page loading
+
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium/v8.git]
+    1c91cb7 2015-12-07 [ALPS02229934] fix some logs
+
+
+12/04/15 00:02:00: Version 44.0.2403.119 (alps-trunk-m0.tk-42)
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium.git]
+    fa038db 2015-12-02 [ALPS02442604] add log to track stuck issue.
+
+
+11/28/15 00:02:28: Version 44.0.2403.119 (alps-trunk-m0.tk-41)
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium.git]
+    fc652e0 2015-11-27 [ALPS02436942] add api to notify webmediaplayer to prevent create surface
+
+
+11/27/15 00:03:15: Version 44.0.2403.119 (alps-trunk-m0.tk-40)
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium.git]
+    304436a 2015-11-26 [ALPS02430159] Failed to save offline reading
+    78e7f94 2015-11-25 [ALPS02422076] add a system property to change fling friciton
+
+
+11/26/15 00:02:14: Version 44.0.2403.119 (alps-trunk-m0.tk-39)
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium/third_party/WebKit.git]
+    e2baccf 2015-11-25 [ALPS02426601] The saved pages can't be displayed
+
+
+11/25/15 00:02:10: Version 44.0.2403.119 (alps-trunk-m0.tk-38)
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium.git]
+    4fa5e7b 2015-11-24 [ALPS02426628] Tweak insertion handle tap detection for paste popup
+
+
+11/21/15 00:02:38: Version 44.0.2403.119 (alps-trunk-m0.tk-37)
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium.git]
+    d3524e2 2015-11-20 [ALPS02422080] Fix testOnReceivedHttpAuthRequest failed
+    2624494 2015-11-20 [ALPS02422076] fix cts issue, changing fling friction on browser only
+
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium/third_party/WebKit.git]
+    bb1c5ae 2015-11-19 [ALPS02409312] Fix re-enter fullscreen issue for autofullscreen
+
+
+11/20/15 00:03:13: Version 44.0.2403.119 (alps-trunk-m0.tk-36)
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium.git]
+    3a05698 2015-11-19 [ALPS02382873] Fix 2K resoltion criteria
+
+
+11/18/15 00:02:39: Version 44.0.2403.119 (alps-trunk-m0.tk-35)
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium.git]
+    83ded73 2015-11-17 [ALPS02382873] Add a thread priority for raster thread
+
+
+11/17/15 00:02:37: Version 44.0.2403.119 (alps-trunk-m0.tk-34)
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium.git]
+    0b2949d 2015-08-06 [ALPS02238100] Support adjust WebView fling friction
+    df88365 2015-11-10 [ALPS02303303] animated-image low power improvement
+
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium/third_party/WebKit.git]
+    7bc8762 2015-11-16 [ALPS02382873] Use SW if canvas is a advertisement for smoothness
+
+
+11/14/15 00:03:03: Version 44.0.2403.119 (alps-trunk-m0.tk-33)
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium.git]
+    97900fd 2015-11-13 [ALPS02407310] Fix floating ActionModes bugs
+    e25c2aa 2015-11-13 [ALPS02409479] Adjust MSE streambuffer streategy for GMO projects
+    d25d0c7 2015-11-12 [ALPS02409312] Check-in video auto fullscreen mechanism
+
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium/third_party/WebKit.git]
+    80479f2 2015-11-12 [ALPS02409312] Check-in video auto fullscreen mechanism
+
+
+11/13/15 00:02:12: Version 44.0.2403.119 (alps-trunk-m0.tk-32)
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium.git]
+    d8cdbbb 2015-11-12 [ALPS02404956] Fix that the value of mime type maybe null
+
+
+11/12/15 00:02:19: Version 44.0.2403.119 (alps-trunk-m0.tk-31)
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium.git]
+    479e0fd 2015-10-21 [ALPS02367276] Performance enhancement for page loading
+
+
+11/10/15 00:01:47: Version 44.0.2403.119 (alps-trunk-m0.tk-30)
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium.git]
+    70a7d9c 2015-11-09 [ALPS02387202] Leave error description empty in AwContents
+    35932f1 2015-11-06 [ALPS02382873] UX Enhancement for 2K resolution
+
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium/third_party/WebKit.git]
+    27e4847 2015-11-09 [ALPS02401683] Vellamo page load performance enhancement
+
+
+11/09/15 09:44:55: Version 44.0.2403.119 (alps-trunk-m0.tk-29)
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium.git]
+    e12e6a2 2015-09-11 [ALPS02303303] animated-image low power improvement
+
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium/third_party/WebKit.git]
+    34074cd 2015-09-11 [ALPS02303303] animated-image low power improvement
+
+
+11/06/15 00:01:33: Version 44.0.2403.119 (alps-trunk-m0.tk-28)
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium.git]
+    861fcd5f 2015-11-05 [ALPS02393574] Use Chinese translation file for zh-HK
+
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium/third_party/WebKit.git]
+    5b44871 2015-11-05 [ALPS02396431] [Chromium][WML]Fix Coverity warning
+
+
+11/05/15 00:01:08: Version 44.0.2403.119 (alps-trunk-m0.tk-27)
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium.git]
+    eba34e8 2015-11-04 [ALPS02385215] Enable accelerated canvas for GPU with new driver version
+
+
+11/04/15 15:57:15: Version 44.0.2403.119 (alps-trunk-m0.tk-26)
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium.git]
+    a5a796e 2015-11-04 [ALPS02381150] Fix black tile on the web page
+
+
+11/03/15 14:54:56: Version 44.0.2403.119 (alps-trunk-m0.tk-25)
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium.git]
+    5ebda38 2015-11-03 [ALPS02387985] Fix insertion handle won't hide in hidePopups
+
+
+10/24/15 00:01:32: Version 44.0.2403.119 (alps-trunk-m0.tk-24)
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium.git]
+    3d19a62 2015-10-23 [ALPS02278164] Fix refresh when scroll up/down on mobile01
+
+
+10/19/15 20:13:17: Version 44.0.2403.119 (alps-trunk-m0.tk-23)
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium.git]
+    8e10449 2015-10-19 [ALPS02362044] Revert "Fix testRequestChildRectangleOnScreen failed"
+
+
+10/16/15 17:14:32: Version 44.0.2403.119 (alps-trunk-m0.tk-22)
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium.git]
+    0eec0b1 2015-10-16 [ALPS02350249] Fix testRequestChildRectangleOnScreen failed
+    171c951 2015-10-16 [ALPS02354735] Fix uiautomator: binder buffer exhaust issue
+
+
+10/13/15 14:17:19: Version 44.0.2403.119 (alps-trunk-m0.tk-21)
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium.git]
+    01840fa 2015-10-12 [ALPS02344615] Fix Browser NE
+
+09/25/15 00:24:07: Version 44.0.2403.119 (alps-trunk-m0.tk-20)
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium/third_party/WebKit.git]
+    30a3fa8 2015-09-24 [ALPS02328964] Fix saved offline page from sina.cn can't be opened
+
+
+09/20/15 00:00:42: Version 44.0.2403.119 (alps-trunk-m0.tk-19)
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium.git]
+    fa13a44 2015-09-19 Merge "[ALPS02300618] fix continue drawing when no content update" into alps-trunk-m0.tk
+    e4557b4 2015-09-19 [ALPS02300618] fix continue drawing when no content update
+
+09/19/15 00:01:26: Version 44.0.2403.119 (alps-trunk-m0.tk-18)
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium/third_party/WebKit.git]
+    730bd3a 2015-09-18 [ALPS02307672] Attempt scroll restoration anytime viewport size changes
+
+09/18/15 00:01:26: Version 44.0.2403.119 (alps-trunk-m0.tk-17)
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium.git]
+    5d195f5 2015-09-17 Merge "[ALPS02306243] Recover from timing problem at exit of video-fullscreen" into alps-trunk-m0.tk
+    5a8d57d 2015-09-16 [ALPS02306243] Recover from timing problem at exit of video-fullscreen
+
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium/third_party/WebKit.git]
+    40f1ade 2015-09-17 [ALPS02304043] Fix XHTMLP page width issue
+
+09/17/15 00:00:54: Version 44.0.2403.119 (alps-trunk-m0.tk-16)
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium.git]
+    7941861 2015-09-16 [ALPS02304081] Disable Gpu Rasterization
+    006f35a 2015-09-16 [ALPS02304374] Before download, guess the mime type when it's empty.
+
+09/14/15 15:07:04: Version 44.0.2403.119 (alps-trunk-m0.tk-15)
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium.git]
+    0033154 2015-09-11 [ALPS02278241] Fix webview build error after framework update
+
+09/12/15 00:01:09: Version 44.0.2403.119 (alps-trunk-m0.tk-14)
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium.git]
+    0a42efb 2015-09-11 Merge "[ALPS02293300] Enhance the score of ocean scroller" into alps-trunk-m0.tk
+    1b8c53f 2015-09-08 [ALPS02293300] Enhance the score of ocean scroller
+
+09/11/15 00:00:43: Version 44.0.2403.119 (alps-trunk-m0.tk-13)
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium.git]
+    6db4f0e 2015-09-10 Merge "[ALPS02294488] Mute/Unmute icon not update its status once we switched" into alps-trunk-m0.tk
+    9c8936e 2015-09-09 [ALPS02294488] Mute/Unmute icon not update its status once we switched
+
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium/third_party/WebKit.git]
+    0f81701 2015-09-10 [ALPS02292960] Fix PageScale become abnormal when toggling fullscreen mode
+
+09/04/15 00:02:03: Version 44.0.2403.119 (alps-trunk-m0.tk-12)
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium.git]
+    b870679 2015-09-03 Merge "[ALPS02276674] fix 163.com, 126.com mail password problem." into alps-trunk-m0.tk
+    4f812fe 2015-09-03 [ALPS02214515] Fix the problem that could not connect to dev tool
+    892f4d3 2015-09-02 [ALPS02276674] fix 163.com, 126.com mail password problem.
+
+09/03/15 00:02:01: Version 44.0.2403.119 (alps-trunk-m0.tk-11)
+
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium.git]
+    c742be6 2015-09-02 [ALPS02286795] The URL icon is not update when back to previous webpage.
+
+09/02/15 09:43:11: Version 44.0.2403.119 (alps-trunk-m0.tk-10)
+
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium/third_party/WebKit.git]
+    9b4293b 2015-09-02 [ALPS02284242] Add initial scale for XHTML MP UserAgentStyleSheet
+
+08/29/15 00:02:02: Version 44.0.2403.119 (alps-trunk-m0.tk-9)
+
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium.git]
+    d90336f 2015-08-28 Merge "[ALPS02275568] Fix PasswordHandler can't receive message" into alps-trunk-m0.tk
+    506ebfa 2015-08-28 [ALPS02275568] Fix PasswordHandler can't receive message
+    d519ac1 2015-08-27 [ALPS02270390] Fix disable text reflow cannot work.
+
+08/27/15 18:04:27: Version 44.0.2403.119 (alps-trunk-m0.tk-8)
+
+08/27/15 00:02:06: Version 44.0.2403.90 (alps-trunk-m0.tk-7)
+
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium.git]
+    c296e8d 2015-08-26 [ALPS02273532] Correct the getDuration usage in MediaPlayerbridge
+
+08/18/15 00:02:31: Version 44.0.2403.90 (alps-trunk-m0.tk-6)
+
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium.git]
+    eef99ae 2015-08-17 Merge "[ALPS02185923] Fix webviewshell test NE" into alps-trunk-m0.tk
+    8f269c9 2015-08-06 [ALPS02185923] Fix webviewshell test NE
+
+08/17/15 00:02:41: Version 44.0.2403.90 (alps-trunk-m0.tk-5)
+
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium.git]
+    b4bf728 2015-08-14 [ALPS02230220] Unescape file URLs in file chooser in WebView
+
+08/12/15 10:30:50: Version 44.0.2403.90 (alps-trunk-m0.tk-4)
+
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium.git]
+    0bef914 2015-08-10 [ALPS02214515] Fix WebViewShell test case fail
+    5db6f75 2015-08-10 Merge "[ALPS02192421] fix WebViewShell test fail" into alps-trunk-m0.tk
+    8fb402f 2015-08-05 [ALPS02192421] fix WebViewShell test fail
+    decaa8f 2015-08-05 [ALPS02185923] Performance enhancement for scrolling
+    0c664c0 2015-08-04 Merge "[ALPS02161039] M Migration: Fix WebviewShell testcase" into alps-trunk-m0.tk
+    4ced70c 2015-08-03 Merge "[ALPS02192421] fix WebViewShell test fail" into alps-trunk-m0.tk
+    20d29b6 2015-08-03 [ALPS02161039] M Migration: Fix WebviewShell testcase
+    8fb3af4 2015-08-03 Merge "[ALPS02185923] Enable Send bengin main frame early" into alps-trunk-m0.tk
+    a2e2114 2015-07-30 [ALPS02192421] fix WebViewShell test fail
+    95955e6 2015-08-03 [ALPS02185923] Enable Send bengin main frame early
+
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium/v8.git]
+    4c855bb 2015-08-05 [ALPS02229934] Chromium M0 Sunspider enhancement
+
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium/third_party/WebKit.git]
+    612cd8b 2015-08-10 [ALPS02214401][Android M Migration] WML migration
+    691ae04 2015-08-03 [ALPS02185923] Fix Syntax error
+
+08/03/15 16:13:50: Version 44.0.2403.90 (alps-trunk-m0.tk-3)
+
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium.git]
+    95323e2 2015-08-03 [ALPS02154578] Merge MTK features to AOSP Browser
+    f119abe 2015-07-30 [ALPS02192421] M-migration
+
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium/third_party/WebKit.git]
+    094b92b 2015-07-30 [ALPS02214401][Android M Migration] WML migration
+
+07/29/15 20:48:21: Version 44.0.2403.90 (alps-trunk-m0.tk-2)
+
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium/third_party/skia.git]
+    ae36f9d 2015-06-16 [ALPS02161877] [Need Patch] [Volunteer Patch] M Migration
+
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium.git]
+    d2698d7 2015-07-07 [ALPS02161039] [Need Patch] [Volunteer Patch] Migrate code to Chromium M
+    8e1eb68 2015-06-10 [ALPS02161039] [Need Patch] [Volunteer Patch] Migrate code to Chromium M
+    d7749cd 2015-07-27 [ALPS02214778] Restore under flag historic behaviour of lastchange.py
+    38a2621 2015-07-14 [ALPS02192421] [Need Patch] [Volunteer Patch] M Migration
+    404b557 2015-07-13 [ALPS02185923] Performance enhancement for OceanScroller
+    c2abb0f 2015-07-08 [ALPS02185923] Performance Enhancement for css 3d
+    6a76355 2015-07-07 [ALPS02211769] Migrate HTML5 webview reated patch
+    8f2944b 2015-07-08 [ALPS02185923] Performance enhancement - reduce GC
+    56d3a75 2015-07-27 [ALPS02214778] Merge L-MR1 changelist 3252665 to alps-trunk-m0.tk part 1
+    507973f 2015-07-16 [ALPS02214401][Android M Migration] WML migration
+    4dfda37 2015-07-02 [ALPS02161877] M-Migration patches from ALPS01952698
+    a6da56b 2015-07-01 [ALPS02161877] M-Migration Bug fix for ALPS01857195 and ALPS01857883
+    b1c250b 2015-07-01 [ALPS02161877] M-Migration - add debug info
+    6bea978 2015-07-27 [ALPS02214515] Remove black list item for WebGL
+    420f1eb 2015-06-15 [ALPS02161877] [Need Patch] [Volunteer Patch] M Migration
+    aed0f2d 2015-07-06 [ALPS02211769] HTML5 video relate migration
+
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium/v8.git]
+    e8c2a62 2015-04-29 [ALPS02161039] [Need Patch] [Volunteer Patch] Migrate code to Chromium M
+    e621a4f 2015-06-10 [ALPS02161039] [Need Patch] [Volunteer Patch] Migrate code to Chromium M
+    5ec6abc 2015-06-10 [ALPS02161039] [Need Patch] [Volunteer Patch] Migrate code to Chromium M
+    521a157 2015-02-05 [ALPS02161039] [Need Patch] [Volunteer Patch] Migrate code to Chromium M
+    17d5035 2015-02-04 [ALPS02161039] [Need Patch] [Volunteer Patch] Migrate code to Chromium M
+
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium/third_party/WebKit.git]
+    4e46dbc 2015-07-15 [ALPS02214778] Open the www.qq.com web page display abnormal
+    ae72450 2015-07-20 [ALPS02214401][Android M Migration] WML migration
+    a880b3a 2015-07-27 [ALPS02214778] Merge L-MR1 changelist 3402199, 3523539 to alps-trunk-m0.tk
+    611e624 2015-07-16 [ALPS02214401][Android M Migration] WML migration
+    6b9be9f 2015-07-14 [ALPS02192421] [Need Patch] [Volunteer Patch] M Migration
+    480a751 2015-07-21 [ALPS02185923] Performance enhancement for Vellamo Ocean scroller
+    7e6f9be 2015-07-27 [ALPS02214515] Performance enhancement for canvas 2D
+    612e620 2015-06-16 [ALPS02161877] [Need Patch] [Volunteer Patch] M Migration
+
+07/29/15 18:11:30: Version 44.0.2403.54 (alps-trunk-m0.tk-1)
+
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium.git]
+    659fbd3 2015-07-29 Merge "[ALPS02154578] Merge MTK features to AOSP Browser" into alps-trunk-m0.tk
+    c053280 2015-07-29 [ALPS02154578] Merge MTK features to AOSP Browser
+    145840e 2015-07-07 [ALPS02161039] [Need Patch] [Volunteer Patch] Migrate code to Chromium M
+    980cf07 2015-06-10 [ALPS02161039] [Need Patch] [Volunteer Patch] Migrate code to Chromium M
+
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium/v8.git]
+    a758399 2015-04-29 [ALPS02161039] [Need Patch] [Volunteer Patch] Migrate code to Chromium M
+    a93533b 2015-06-10 [ALPS02161039] [Need Patch] [Volunteer Patch] Migrate code to Chromium M
+    95fbb96 2015-06-10 [ALPS02161039] [Need Patch] [Volunteer Patch] Migrate code to Chromium M
+    b85cf74 2015-02-05 [ALPS02161039] [Need Patch] [Volunteer Patch] Migrate code to Chromium M
+    d1070e4 2015-02-04 [ALPS02161039] [Need Patch] [Volunteer Patch] Migrate code to Chromium M
+
+07/27/15 23:01:08: Version 44.0.2403.54 (alps-trunk-m0.tk-0)
+
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium/third_party/skia.git]
+    d63ac0f 2015-06-16 [ALPS02161877] [Need Patch] [Volunteer Patch] M Migration
+
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium.git]
+    8acd73c 2015-07-27 Merge "[ALPS02192421] [Need Patch] [Volunteer Patch] M Migration" into alps-trunk-m0.tk
+    6f8ec36 2015-07-27 Merge "[ALPS02214778] Restore under flag historic behaviour of lastchange.py" into alps-trunk-m0.tk
+    226dd99 2015-07-27 Merge "[ALPS02211769] Migrate HTML5 webview reated patch" into alps-trunk-m0.tk
+    ca8336e 2015-07-27 Merge "[ALPS02211769] HTML5 video relate migration" into alps-trunk-m0.tk
+    9202df9 2015-07-27 Merge "[ALPS02185923] Performance enhancement for OceanScroller" into alps-trunk-m0.tk
+    4a629f8 2015-07-27 [ALPS02214778] Restore under flag historic behaviour of lastchange.py
+    cb9c8e1 2015-07-14 [ALPS02192421] [Need Patch] [Volunteer Patch] M Migration
+    ec60dd1 2015-07-27 Merge "[ALPS02214778] Merge L-MR1 changelist 3252665 to alps-trunk-m0.tk part 1" into alps-trunk-m0.tk
+    f7208fb 2015-07-27 Merge "[ALPS02214401][Android M Migration] WML migration" into alps-trunk-m0.tk
+    23c29d7 2015-07-13 [ALPS02185923] Performance enhancement for OceanScroller
+    6b777ea 2015-07-08 [ALPS02185923] Performance Enhancement for css 3d
+    6080c70 2015-07-07 [ALPS02211769] Migrate HTML5 webview reated patch
+    040fd45 2015-07-08 [ALPS02185923] Performance enhancement - reduce GC
+    a822026 2015-07-27 Merge "[ALPS02161877] M-Migration patches from ALPS01952698" into alps-trunk-m0.tk
+    7747f98 2015-07-27 [ALPS02214778] Merge L-MR1 changelist 3252665 to alps-trunk-m0.tk part 1
+    7099dd1 2015-07-16 [ALPS02214401][Android M Migration] WML migration
+    ad8a8a4 2015-07-02 [ALPS02161877] M-Migration patches from ALPS01952698
+    5094e03 2015-07-27 Merge "[ALPS02214515] Remove black list item for WebGL" into alps-trunk-m0.tk
+    dafe0d3 2015-07-01 [ALPS02161877] M-Migration Bug fix for ALPS01857195 and ALPS01857883
+    e062518 2015-07-01 [ALPS02161877] M-Migration - add debug info
+    e2328ce 2015-07-27 [ALPS02214515] Remove black list item for WebGL
+    3289e11 2015-06-15 [ALPS02161877] [Need Patch] [Volunteer Patch] M Migration
+    5c6e77d 2015-07-06 [ALPS02211769] HTML5 video relate migration
+
+  [http://yusubm@gerrit.mediatek.inc:8080/alps/chromium/third_party/WebKit.git]
+    3a5906d 2015-07-27 Merge "[ALPS02192421] [Need Patch] [Volunteer Patch] M Migration" into alps-trunk-m0.tk
+    4dd19df 2015-07-27 Merge "[ALPS02214778] Open the www.qq.com web page display abnormal" into alps-trunk-m0.tk
+    1bcfc56 2015-07-15 [ALPS02214778] Open the www.qq.com web page display abnormal
+    4d50511 2015-07-20 [ALPS02214401][Android M Migration] WML migration
+    3827346 2015-07-27 Merge "[ALPS02214778] Merge L-MR1 changelist 3402199, 3523539 to alps-trunk-m0.tk" into alps-trunk-m0.tk
+    c6de087 2015-07-27 Merge "[ALPS02214401][Android M Migration] WML migration" into alps-trunk-m0.tk
+    dc2aec5 2015-07-27 Merge "[ALPS02214515] Performance enhancement for canvas 2D" into alps-trunk-m0.tk
+    cfd6c3b 2015-07-27 [ALPS02214778] Merge L-MR1 changelist 3402199, 3523539 to alps-trunk-m0.tk
+    9ba82c8 2015-07-16 [ALPS02214401][Android M Migration] WML migration
+    199b418 2015-07-14 [ALPS02192421] [Need Patch] [Volunteer Patch] M Migration
+    1df7e10 2015-07-21 [ALPS02185923] Performance enhancement for Vellamo Ocean scroller
+    9bbf0f3 2015-07-27 [ALPS02214515] Performance enhancement for canvas 2D
+    3245e31 2015-06-16 [ALPS02161877] [Need Patch] [Volunteer Patch] M Migration
+
