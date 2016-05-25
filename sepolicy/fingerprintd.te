@@ -21,3 +21,6 @@ allow fingerprintd keystore:keystore_key { add_auth };
 # For permissions checking
 binder_call(fingerprintd, system_server);
 allow fingerprintd permission_service:service_manager find;
+# aka.jiang add for fingerprint ET3XX 20160308
+allow fingerprintd etsd_service:service_manager find;
+binder_call(fingerprintd, etsd);
