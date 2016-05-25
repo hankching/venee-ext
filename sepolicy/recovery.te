@@ -2,7 +2,11 @@
 
 # Declare the domain unconditionally so we can always reference it
 # in neverallow rules.
-type recovery, domain;
+#fota start
+#type recovery, domain;
+type recovery, domain, mlstrustedsubject;
+typeattribute recovery mlstrustedsubject;
+#fota end
 
 # But the allow rules are only included in the recovery policy.
 # Otherwise recovery is only allowed the domain rules.
@@ -98,6 +102,103 @@ recovery_only(`
   # This line seems suspect, as it should not really need to
   # set scheduling parameters for a kernel domain task.
   allow recovery kernel:process setsched;
+
+  #fota start
+
+  allow recovery proc:file write;
+  allow recovery system_prop:property_service set;
+  allow recovery media_rw_data_file:dir create_dir_perms;
+  allow recovery media_rw_data_file:file create_file_perms;
+  allow recovery nvram_data_file:dir create_dir_perms;
+  allow recovery nvram_data_file:file create_file_perms;
+  allow recovery nvram_data_file:lnk_file { getattr unlink read};
+  allow recovery nvdata_file:dir create_dir_perms;
+  allow recovery nvdata_file:file create_file_perms;
+  allow recovery nvdata_file:lnk_file { getattr unlink read};
+  allow recovery rootfs:dir { add_name create };
+  allow recovery rootfs:dir write;
+
+  allow recovery { adb_keys_file keychain_data_file }:dir { open read write getattr search rmdir remove_name };
+  allow recovery { adb_keys_file keychain_data_file }:file { getattr unlink };
+
+  #allow recovery keystore_data_file:dir { open read getattr search };
+  #allow recovery keystore_data_file:file { getattr };
+
+  allow recovery { shell_data_file bluetooth_data_file net_data_file }:dir { open read write getattr search rmdir remove_name };
+  allow recovery { shell_data_file bluetooth_data_file net_data_file }:file { getattr unlink };
+
+  allow recovery { apk_private_data_file vpn_data_file zoneinfo_data_file shared_relro_file }:dir { open read write getattr search rmdir remove_name };
+  allow recovery { apk_private_data_file vpn_data_file zoneinfo_data_file shared_relro_file }:file { getattr unlink };
+
+  allow recovery { adb_data_file dhcp_data_file misc_user_data_file systemkeys_data_file }:dir { open read write getattr search rmdir remove_name };
+  allow recovery { adb_data_file dhcp_data_file misc_user_data_file systemkeys_data_file }:file { getattr unlink };
+
+  allow recovery { wifi_data_file camera_data_file media_data_file wpa_socket }:dir { open read write getattr search rmdir remove_name };
+  allow recovery { wifi_data_file camera_data_file media_data_file wpa_socket }:file { getattr unlink };
+
+  allow recovery { audio_data_file }:dir { open read write getattr search rmdir remove_name };
+  allow recovery { audio_data_file }:file { getattr unlink };
+
+  allow recovery { anr_data_file asec_image_file backup_data_file }:dir { open read write getattr search rmdir remove_name };
+  allow recovery { anr_data_file asec_image_file backup_data_file }:file { getattr unlink };
+
+  allow recovery { radio_data_file dalvikcache_data_file }:dir { open read write getattr search rmdir remove_name };
+  allow recovery { radio_data_file dalvikcache_data_file }:file { getattr unlink };
+
+  allow recovery { drm_data_file nfc_data_file resourcecache_data_file }:dir { open read write getattr search rmdir remove_name };
+  allow recovery { drm_data_file nfc_data_file resourcecache_data_file }:file { getattr unlink };
+
+  allow recovery property_data_file:dir { open read getattr search };
+  allow recovery property_data_file:file { getattr };
+
+  allow recovery { tombstone_data_file }:dir { open read write getattr search rmdir remove_name };
+  allow recovery { tombstone_data_file }:file { getattr unlink };
+
+  allow recovery security_file:dir { open read getattr search };
+
+  allow recovery { dalvikcache_profiles_data_file }:dir { open read write getattr search rmdir remove_name };
+  allow recovery { dalvikcache_profiles_data_file }:file { getattr unlink };
+
+  allow recovery { cache_backup_file }:dir { open read write getattr search rmdir remove_name };
+  allow recovery { cache_backup_file }:file { getattr unlink };
+
+  allow recovery { wallpaper_file apk_private_tmp_file gps_data_file cache_file cache_backup_file efs_file }:file { getattr unlink};
+  allow recovery { asec_apk_file asec_public_file bluetooth_efs_file }:file { getattr unlink};
+
+  allow recovery { rootfs }:file { create write getattr unlink };
+  allow recovery { shell_data_file system_app_data_file radio_data_file bluetooth_data_file system_data_file nfc_data_file }:lnk_file { getattr unlink read};
+  allow recovery { shell_data_file radio_data_file bluetooth_data_file nfc_data_file }:lnk_file { getattr unlink read};
+
+  allow recovery { camera_data_file system_ndebug_socket system_wpa_socket wpa_socket }:sock_file { getattr unlink };
+  allow recovery { shell_data_file radio_data_file bluetooth_data_file nfc_data_file }:lnk_file { getattr unlink read};
+  allow recovery { system_data_file }:fifo_file { open read write getattr rw_file_perms unlink };
+  allow recovery media_rw_data_file:dir create_dir_perms;
+  allow recovery media_rw_data_file:file create_file_perms;
+  allow recovery media_rw_data_file:lnk_file { getattr unlink read};
+  allow recovery app_data_file:dir create_dir_perms;
+  allow recovery app_data_file:file create_file_perms;
+  allow recovery app_data_file:lnk_file { getattr unlink read};
+  allow recovery apk_data_file:dir create_dir_perms;
+  allow recovery apk_data_file:file create_file_perms;
+  allow recovery apk_data_file:lnk_file { getattr unlink read};
+
+  allow recovery system_app_data_file:dir create_dir_perms;
+  allow recovery system_app_data_file:file create_file_perms;
+  allow recovery system_app_data_file:lnk_file { getattr unlink read};
+  
+  allow recovery system_data_file:dir create_dir_perms;
+  allow recovery system_data_file:file create_file_perms;
+  allow recovery system_data_file:lnk_file { getattr unlink read};
+  allow recovery system_data_file:fifo_file { open read write getattr rw_file_perms unlink };
+
+  allow recovery nvram_data_file:dir create_dir_perms;
+  allow recovery nvram_data_file:file create_file_perms;
+  allow recovery nvram_data_file:lnk_file { getattr unlink read};
+
+  allow recovery nvdata_file:dir create_dir_perms;
+  allow recovery nvdata_file:file create_file_perms;
+  allow recovery nvdata_file:lnk_file { getattr unlink read};
+  #fota end
 ')
 
 ###
@@ -114,5 +215,7 @@ recovery_only(`
 # domains, including recovery.
 #
 # TODO: tighten this up further.
-neverallow recovery data_file_type:file { no_w_file_perms no_x_file_perms };
-neverallow recovery data_file_type:dir no_w_dir_perms;
+#fota start
+#neverallow recovery data_file_type:file { no_w_file_perms no_x_file_perms };
+#neverallow recovery data_file_type:dir no_w_dir_perms;
+
