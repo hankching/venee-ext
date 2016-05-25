@@ -1182,7 +1182,12 @@ unsigned int getISOSpeedRatings(void *buffer, unsigned int size)
     /* find IFD tag ExifOffset */
     while(findEXIFOffset == false && bytesLeft >= 2)
     {
-        unsigned int dirEntries = (*(bufPtr + 1) << 8) + *bufPtr;
+        unsigned int dirEntries;
+        if (isIntelAlign == true)
+            dirEntries = (*(bufPtr + 1) << 8) + *bufPtr;
+	else
+            dirEntries = (*bufPtr << 8) + *(bufPtr + 1);
+
 	bufPtr += 2;
 	bytesLeft -= 2;
 
@@ -1241,7 +1246,13 @@ unsigned int getISOSpeedRatings(void *buffer, unsigned int size)
     if (findEXIFOffset == true && bytesLeft >= 12)
     {
 	unsigned int ISOSpeedRatings;
-	unsigned int dirEntries = (*(bufPtr + 1) << 8) + *bufPtr;
+	unsigned int dirEntries;
+	
+        if (isIntelAlign == true)
+            dirEntries = (*(bufPtr + 1) << 8) + *bufPtr;
+	else
+            dirEntries = (*bufPtr << 8) + *(bufPtr + 1);
+	
 	bufPtr += 2;
 	bytesLeft -= 2;
 	    
