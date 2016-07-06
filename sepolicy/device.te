@@ -93,3 +93,5 @@ type swap_block_device, dev_type;
 # Assign this type to the partition specified by the encryptable=
 # mount option in your fstab file in the entry for userdata.
 type metadata_block_device, dev_type;
+
+type finger_device, dev_type;

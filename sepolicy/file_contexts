@@ -316,3 +316,6 @@
 /mnt/user(/.*)?             u:object_r:mnt_user_file:s0
 /mnt/runtime(/.*)?          u:object_r:storage_file:s0
 /storage(/.*)?              u:object_r:storage_file:s0
+
+#microarray fingerprint support
+/dev/madev0 u:object_r:finger_device:s0
