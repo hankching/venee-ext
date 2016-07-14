@@ -113,9 +113,8 @@ private:
     bool decodePalette(png_structp png_ptr, png_infop info_ptr, int bitDepth,
                        bool * SK_RESTRICT hasAlphap, bool *reallyHasAlphap,
                        SkColorTable **colorTablep);
-    //add isSubset
     bool getBitmapColorType(png_structp, png_infop, SkColorType*, bool* hasAlpha,
-                            SkPMColor* theTranspColor, bool isSubset);
+                            SkPMColor* theTranspColor);
 
     typedef SkImageDecoder INHERITED;
 };
@@ -253,7 +252,7 @@ bool SkPNGImageDecoder::onDecodeInit(SkStream* sk_stream, png_structp *png_ptrp,
     }
 
     *png_ptrp = png_ptr;
-    png_ptr->is_decode_subset = 0;
+
     /* Allocate/initialize the memory for image information. */
     png_infop info_ptr = png_create_info_struct(png_ptr);
     if (info_ptr == NULL) {
@@ -345,7 +344,7 @@ SkImageDecoder::Result SkPNGImageDecoder::onDecode(SkStream* sk_stream, SkBitmap
     bool                hasAlpha = false;
     SkPMColor           theTranspColor = 0; // 0 tells us not to try to match
 
-    if (!this->getBitmapColorType(png_ptr, info_ptr, &colorType, &hasAlpha, &theTranspColor, false)) {
+    if (!this->getBitmapColorType(png_ptr, info_ptr, &colorType, &hasAlpha, &theTranspColor)) {
         return kFailure;
     }
 
@@ -437,20 +436,6 @@ SkImageDecoder::Result SkPNGImageDecoder::onDecode(SkStream* sk_stream, SkBitmap
             sc = SkScaledBitmapSampler::kRGBA;
         } else {
             sc = SkScaledBitmapSampler::kRGBX;
-        }
-
-        //add for performance
-        if (bitDepth == 8) {
-            if (pngColorType == PNG_COLOR_TYPE_GRAY) { //0
-            sc = SkScaledBitmapSampler::kGray;
-            srcBytesPerPixel = 1;
-            } else if (pngColorType == PNG_COLOR_TYPE_GRAY_ALPHA) { //4
-                sc = SkScaledBitmapSampler::kGrayA;
-                srcBytesPerPixel = 2;
-            } else if (pngColorType == PNG_COLOR_TYPE_RGB) { //2
-                sc = SkScaledBitmapSampler::kRGB;
-                srcBytesPerPixel = 3;
-            }
         }
 
         /*  We have to pass the colortable explicitly, since we may have one
@@ -545,7 +530,7 @@ SkImageDecoder::Result SkPNGImageDecoder::onDecode(SkStream* sk_stream, SkBitmap
 bool SkPNGImageDecoder::getBitmapColorType(png_structp png_ptr, png_infop info_ptr,
                                            SkColorType* colorTypep,
                                            bool* hasAlphap,
-                                           SkPMColor* SK_RESTRICT theTranspColorp, bool isSubset) {
+                                           SkPMColor* SK_RESTRICT theTranspColorp) {
     png_uint_32 origWidth, origHeight;
     int bitDepth, colorType;
     png_get_IHDR(png_ptr, info_ptr, &origWidth, &origHeight, &bitDepth,
@@ -686,8 +671,6 @@ bool SkPNGImageDecoder::getBitmapColorType(png_structp png_ptr, png_infop info_p
 
     bool convertGrayToRGB = PNG_COLOR_TYPE_GRAY == colorType && *colorTypep != kAlpha_8_SkColorType;
 
-	if (isSubset || bitDepth != 8)
-	{
 		// Unless the user is requesting A8, convert a grayscale image into RGB.
 		// GRAY_ALPHA will always be converted to RGB
 		if (convertGrayToRGB || colorType == PNG_COLOR_TYPE_GRAY_ALPHA) {
@@ -698,7 +681,7 @@ bool SkPNGImageDecoder::getBitmapColorType(png_structp png_ptr, png_infop info_p
 		if (colorType == PNG_COLOR_TYPE_RGB || convertGrayToRGB) {
 			png_set_filler(png_ptr, 0xff, PNG_FILLER_AFTER);
 		}
-	}
+
     return true;
 }
 
@@ -816,7 +799,6 @@ bool SkPNGImageDecoder::onDecodeSubset(SkBitmap* bm, const SkIRect& region) {
     png_structp png_ptr = fImageIndex->fPng_ptr;
     png_infop info_ptr = fImageIndex->fInfo_ptr;
     uint8_t* storage = NULL;
-    png_ptr->is_decode_subset = 1;
     if (setjmp(png_jmpbuf(png_ptr))) {
         SkDebugf("SkPNGImageDecoder::onDecodeSubset Fail L:%d!!\n", __LINE__);	
 		if (storage) {
@@ -845,7 +827,7 @@ bool SkPNGImageDecoder::onDecodeSubset(SkBitmap* bm, const SkIRect& region) {
     bool                hasAlpha = false;
     SkPMColor           theTranspColor = 0; // 0 tells us not to try to match
 
-    if (!this->getBitmapColorType(png_ptr, info_ptr, &colorType, &hasAlpha, &theTranspColor, true)) {
+    if (!this->getBitmapColorType(png_ptr, info_ptr, &colorType, &hasAlpha, &theTranspColor)) {
         return false;
     }
 

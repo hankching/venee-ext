@@ -22,9 +22,9 @@ common_SRC_FILES := \
 
 ifeq ($(ARCH_ARM_HAVE_NEON),true)
 my_cflags_arm := -DPNG_ARM_NEON_OPT=2
-my_cflags_arm64 := -DPNG_ARM_NEON_OPT=2
 endif
 
+my_cflags_arm64 := -DPNG_ARM_NEON_OPT=2
 
 # BUG: http://llvm.org/PR19472 - SLP vectorization (on ARM at least) crashes
 # when we can't lower a vectorized bswap.
@@ -63,31 +63,9 @@ LOCAL_ASFLAGS += $(common_ASFLAGS)
 LOCAL_SRC_FILES_arm := $(my_src_files_arm)
 LOCAL_CFLAGS_arm64 := $(my_cflags_arm64)
 LOCAL_SRC_FILES_arm64 := $(my_src_files_arm)
-
 LOCAL_ADDRESS_SANITIZER := false
 LOCAL_EXPORT_C_INCLUDE_DIRS := $(LOCAL_PATH)
 LOCAL_SHARED_LIBRARIES := libz
-
-
-LOCAL_C_INCLUDES += $(common_C_INCLUDES) \
-	external/zlib
-LOCAL_SHARED_LIBRARIES := \
-	libz
-
-ifeq ($(ARCH_ARM_HAVE_NEON),true)
-    LOCAL_CFLAGS_arm += -D__ARM_HAVE_NEON
-    LOCAL_CFLAGS += -D__ARM_HAVE_NEON_COMMON
-    LOCAL_WHOLE_STATIC_LIBRARIES += libpng_filter
-endif
-
-ifneq ($(strip $(MTK_PLATFORM)),)
-	LOCAL_CFLAGS += -DNOT_EMULATOR
-    LOCAL_SHARED_LIBRARIES += \
-	    libcutils \
-	    libutils
-endif
-
-
 LOCAL_MODULE:= libpng
 include $(BUILD_STATIC_LIBRARY)
 
@@ -103,29 +81,8 @@ LOCAL_ASFLAGS += $(common_ASFLAGS)
 LOCAL_SRC_FILES_arm := $(my_src_files_arm)
 LOCAL_CFLAGS_arm64 := $(my_cflags_arm64)
 LOCAL_SRC_FILES_arm64 := $(my_src_files_arm)
-
 LOCAL_EXPORT_C_INCLUDE_DIRS := $(LOCAL_PATH)
 LOCAL_SHARED_LIBRARIES := libz
-
-
-LOCAL_C_INCLUDES += $(common_C_INCLUDES) \
-	external/zlib
-LOCAL_SHARED_LIBRARIES := \
-	libz
-
-ifeq ($(ARCH_ARM_HAVE_NEON),true)
-    LOCAL_CFLAGS_arm += -D__ARM_HAVE_NEON
-    LOCAL_CFLAGS += -D__ARM_HAVE_NEON_COMMON
-    LOCAL_STATIC_LIBRARIES += libpng_filter
-endif
-
-ifneq ($(strip $(MTK_PLATFORM)),)
-	LOCAL_CFLAGS += -DNOT_EMULATOR
-    LOCAL_SHARED_LIBRARIES += \
-	    libcutils \
-	    libutils
-endif
-
 LOCAL_MODULE:= libpng
 include $(BUILD_SHARED_LIBRARY)
 

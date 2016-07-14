@@ -2445,18 +2445,18 @@ static void wpa_supplicant_event_disassoc(struct wpa_supplicant *wpa_s,
 			wpa_msg(wpa_s, MSG_INFO, WPA_EVENT_DISCONNECTED "bssid=" MACSTR
 				" reason=%d%s peer_oper_freq=%d",
 				MAC2STR(bssid), reason_code,
-				locally_generated ? " locally_generated=1" : "",
+				locally_generated ? " locally_generated=1" : " locally_generated=0",
 				wpas_get_peer_oper_freq(wpa_s));
 		else
 			wpa_msg(wpa_s, MSG_INFO, WPA_EVENT_DISCONNECTED "bssid=" MACSTR
 				" reason=%d%s",
 				MAC2STR(bssid), reason_code,
-				locally_generated ? " locally_generated=1" : "");
+				locally_generated ? " locally_generated=1" : " locally_generated=0");
 #else
 		wpa_msg(wpa_s, MSG_INFO, WPA_EVENT_DISCONNECTED "bssid=" MACSTR
 			" reason=%d%s",
 			MAC2STR(bssid), reason_code,
-			locally_generated ? " locally_generated=1" : "");
+			locally_generated ? " locally_generated=1" : " locally_generated=0");
 #endif
 	}
 }
