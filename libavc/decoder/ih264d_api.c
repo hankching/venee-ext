@@ -1426,6 +1426,25 @@ void ih264d_init_decoder(void * ps_dec_params)
     dec_struct_t * ps_dec = (dec_struct_t *)ps_dec_params;
     dec_slice_params_t *ps_cur_slice;
     pocstruct_t *ps_prev_poc, *ps_cur_poc;
+    WORD32 size;
+
+    size = sizeof(dec_err_status_t);
+    memset(ps_dec->ps_dec_err_status, 0, size);
+
+    size = sizeof(sei);
+    memset(ps_dec->ps_sei, 0, size);
+
+    size = sizeof(dpb_commands_t);
+    memset(ps_dec->ps_dpb_cmds, 0, size);
+
+    size = sizeof(dec_bit_stream_t);
+    memset(ps_dec->ps_bitstrm, 0, size);
+
+    size = sizeof(dec_slice_params_t);
+    memset(ps_dec->ps_cur_slice, 0, size);
+
+    size = MAX(sizeof(dec_seq_params_t), sizeof(dec_pic_params_t));
+    memset(ps_dec->pv_scratch_sps_pps, 0, size);
 
 
 
@@ -1612,6 +1631,7 @@ void ih264d_init_decoder(void * ps_dec_params)
            (MAX_DISP_BUFS_NEW) * sizeof(UWORD32));
     memset(ps_dec->u4_disp_buf_to_be_freed, 0,
            (MAX_DISP_BUFS_NEW) * sizeof(UWORD32));
+    memset(ps_dec->ps_cur_slice, 0, sizeof(dec_slice_params_t));
 
     ih264d_init_arch(ps_dec);
     ih264d_init_function_ptr(ps_dec);
@@ -2599,6 +2619,14 @@ WORD32 ih264d_video_decode(iv_obj_t *dec_hdl, void *pv_api_ip, void *pv_api_op)
 
     ps_dec_ip = (ivd_video_decode_ip_t *)pv_api_ip;
     ps_dec_op = (ivd_video_decode_op_t *)pv_api_op;
+
+    {
+        UWORD32 u4_size;
+        u4_size = ps_dec_op->u4_size;
+        memset(ps_dec_op, 0, sizeof(ivd_video_decode_op_t));
+        ps_dec_op->u4_size = u4_size;
+    }
+
     ps_dec->pv_dec_out = ps_dec_op;
     ps_dec->process_called = 1;
     if(ps_dec->init_done != 1)
