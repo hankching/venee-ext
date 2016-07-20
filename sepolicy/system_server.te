@@ -457,3 +457,6 @@ neverallow system_server dex2oat_exec:file no_x_file_perms;
 # the frp_block_device. This helps avoid a system_server to root
 # escalation by writing to raw block devices.
 neverallow system_server { dev_type -frp_block_device }:blk_file no_rw_file_perms;
+
+#Add by cz fix bug 3779.Add for sdcard ringtone
+allow system_server vfat:file read;
