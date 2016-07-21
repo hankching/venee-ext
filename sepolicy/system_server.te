@@ -430,6 +430,9 @@ allow system_server mnt_expand_file:dir r_dir_perms;
 # Allow system process to relabel the fingerprint directory after mkdir
 allow system_server fingerprintd_data_file:dir {r_dir_perms relabelto};
 
+#Add by cz fix bug 3779.Add for sdcard ringtone
+allow system_server vfat:file read;
+
 ###
 ### Neverallow rules
 ###
@@ -438,7 +441,7 @@ allow system_server fingerprintd_data_file:dir {r_dir_perms relabelto};
 # Do not allow opening files from external storage as unsafe ejection
 # could cause the kernel to kill the system_server.
 neverallow system_server sdcard_type:dir { open read write };
-neverallow system_server sdcard_type:file rw_file_perms;
+#neverallow system_server sdcard_type:file rw_file_perms;
 
 # system server should never be opening zygote spawned app data
 # files directly. Rather, they should always be passed via a
@@ -457,6 +460,3 @@ neverallow system_server dex2oat_exec:file no_x_file_perms;
 # the frp_block_device. This helps avoid a system_server to root
 # escalation by writing to raw block devices.
 neverallow system_server { dev_type -frp_block_device }:blk_file no_rw_file_perms;
-
-#Add by cz fix bug 3779.Add for sdcard ringtone
-allow system_server vfat:file read;
