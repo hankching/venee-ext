@@ -16,6 +16,12 @@ allow system_app system_app_data_file:{ file lnk_file } create_file_perms;
 allow system_app keychain_data_file:dir r_dir_perms;
 allow system_app keychain_data_file:file r_file_perms;
 
+#add by mciroarray begin
+allow system_app finger_device:chr_file {read write open ioctl};
+allow system_app fingerprintd_data_file:file { open write read create setattr getattr unlink link rename ioctl lock relabelfrom relabelto };
+allow system_app fingerprintd_data_file:dir { rw_dir_perms relabelfrom relabelto };
+#add by mciroarray 
+
 # Read and write to other system-owned /data directories, such as
 # /data/system/cache and /data/misc/user.
 allow system_app system_data_file:dir create_dir_perms;

@@ -36,6 +36,10 @@ allow untrusted_app asec_apk_file:file r_file_perms;
 # Execute libs in asec containers.
 allow untrusted_app asec_public_file:file { execute execmod };
 
+#add by mciroarray begin
+allow untrusted_app finger_device:chr_file {read write open ioctl};
+#add by mciroarray 
+
 # Allow the allocation and use of ptys
 # Used by: https://play.google.com/store/apps/details?id=jackpal.androidterm
 create_pty(untrusted_app)

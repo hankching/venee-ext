@@ -428,7 +428,8 @@ allow system_server sdcard_type:dir { getattr search };
 allow system_server mnt_expand_file:dir r_dir_perms;
 
 # Allow system process to relabel the fingerprint directory after mkdir
-allow system_server fingerprintd_data_file:dir {r_dir_perms relabelto};
+allow system_server fingerprintd_data_file:file { open write read create setattr getattr unlink link rename ioctl lock relabelfrom relabelto };
+allow system_server fingerprintd_data_file:dir { rw_dir_perms relabelfrom relabelto };
 
 #Add by cz fix bug 3779.Add for sdcard ringtone
 allow system_server vfat:file read;

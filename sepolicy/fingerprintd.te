@@ -9,10 +9,13 @@ binder_use(fingerprintd)
 allow fingerprintd fingerprintd_service:service_manager { add find };
 
 # allow HAL module to read dir contents
-allow fingerprintd fingerprintd_data_file:file { create_file_perms };
+allow fingerprintd fingerprintd_data_file:file { open write read create setattr getattr unlink link rename ioctl lock relabelfrom relabelto };
 
 # allow HAL module to read/write/unlink contents of this dir
-allow fingerprintd fingerprintd_data_file:dir rw_dir_perms;
+allow fingerprintd fingerprintd_data_file:dir { create_dir_perms relabelfrom relabelto };
+
+allow fingerprintd system_data_file:file { open write read create setattr unlink link rename ioctl lock relabelfrom relabelto };
+allow fingerprintd system_data_file:dir { create_dir_perms relabelfrom relabelto };
 
 # Need to add auth tokens to KeyStore
 use_keystore(fingerprintd)
